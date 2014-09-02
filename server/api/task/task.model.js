@@ -9,6 +9,7 @@ var TaskSchema = new Schema({
   active: Boolean,
   reward: String,
   user: String,
+  replies:[],
   dateCreated: {
       type: Date,
       deafault: new Date()
