@@ -4,6 +4,8 @@ angular.module('jobApplicationApp')
   .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.user.role = "user"
+    $scope.roles = ["user", "recruiter"];
 
     $scope.register = function(form) {
       $scope.submitted = true;
