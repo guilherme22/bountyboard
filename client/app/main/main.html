@@ -20,13 +20,14 @@
         </form>
     </div>
 
-    <div class="row">
+    <div class="row" ng-repeat="thing in awesomeThings">
         <div class="well well-small ticket highlight" data-id="494">
             <div class="row">
                 <div class="col-lg-2 text-center">
-                    <div class="bid-text">$50</div><div>expire in 2 days</div></div>
+                    <div class="bid-text">$50</div><div>expire in 2 days</div>
+                </div>
                 <div class="col-lg-8 ticket-info">
-                    <div class="ticket-title"><a href="../ticket/494">Testing make it </a></div>
+                    <div class="ticket-title"><a href="../ticket/494">{{  thing.name  }}</a></div>
                     <div class="short-description">searching for an man that cando it for we!</div>
                     <div style="overflow: hidden;">
                         <span class="pull left"><span class="label label-default tag-label">html</span><span class="label label-default tag-label">html5</span><span class="label label-default tag-label">css</span><span class="label label-default tag-label">css3</span><span class="label label-default tag-label">js</span></span>
@@ -37,19 +38,10 @@
               </span></div>
                 </div>
                 <div class="col-lg-2 text-center"><div class="text-info replies-text">10</div>
-                    <div>replies</div></div>
+                    <div>replies</div><button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></div>
             </div>
-    </div>
-
-
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header"></h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
-    </div>
-  </div>
+         </div>
+   </div>
 
 </div>
 </div>
