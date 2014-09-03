@@ -136,6 +136,10 @@ angular.module('jobApplicationApp')
         return currentUser.role === 'admin';
       },
 
+      isRecruiter: function(){
+          return currentUser.role === 'recruiter';
+      },
+
       /**
        * Get auth token
        */
