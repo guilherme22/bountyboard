@@ -136,6 +136,11 @@ angular.module('jobApplicationApp')
         return currentUser.role === 'admin';
       },
 
+        /**
+         * Check if a user is an recruiter
+         *
+         * @return {Boolean}
+         */
       isRecruiter: function(){
           return currentUser.role === 'recruiter';
       },

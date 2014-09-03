@@ -10,9 +10,9 @@ angular.module('jobApplicationApp')
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
-    $scope.getCurrentUser = Auth.getCurrentUser;
     $scope.isRecruiter = Auth.isRecruiter;
-    console.log(Auth.isRecruiter());
+    $scope.getCurrentUser = Auth.getCurrentUser;
+
 
     $scope.logout = function() {
       Auth.logout();

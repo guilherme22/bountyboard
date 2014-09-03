@@ -12,7 +12,7 @@ var TaskSchema = new Schema({
   replies:[],
   dateCreated: {
       type: Date,
-      deafault: new Date()
+      default: new Date()
   },
   dateUpdated: {
       type: Date,
@@ -22,7 +22,6 @@ var TaskSchema = new Schema({
       type: Number,
       default: 0
   },
-  expire: Date,
   tags:[]
 });
 
