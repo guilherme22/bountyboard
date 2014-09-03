@@ -15,6 +15,7 @@
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
           <li ng-show="isRecruiter()" ng-class="{active:isActive('/task/all')}">   <a href="/task/all">My Tasks</a></li>
+          <li ng-show="isRecruiter()" ng-class="{active:isActive('/task/create')}">   <a href="/task/create">New Task</a></li>
         <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
       </ul>
 
