@@ -18,18 +18,41 @@ angular.module('jobApplicationApp')
       var cb = callback || angular.noop;
 
         $http.post('/api/tasks', task).success(cb).error(function(){
-            alert("Error");
+            console.log("Unnautorized")
         })
+            $http.post('/api/tasks', task).success(cb).error(function(data){
+                console.log(data)
+            })
 
-      },
-      update: function(){
 
+
+        },
+
+      update: function(task, callback){
+          var cb = callback || angular.noop;
+          $http.put('/api/tasks/'+task._id, task).success(cb).error(function(data){
+              console.log(data)
+          })
       },
+
       all: function(callback){
        var cb = callback || angular.noop;
-       $http.get('/api/tasks').success(cb).error(function(){
-           console.log("Error at Task.All()");
+       $http.get('/api/tasks').success(cb).error(function(data){
+           console.log(data);
        })
+      },
+
+      findById: function(id, callback){
+          var cb = callback || angular.noop;
+          if(id){
+              $http.get('/api/tasks/'+id).success(cb).error(function(data){
+                  console.log(data);
+              })
+          }else{
+              return null;
+          }
+
+
       }
 
 

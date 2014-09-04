@@ -3,7 +3,7 @@
 angular.module('jobApplicationApp')
   .controller('AllCtrl',["$scope", "$location", "Task" ,function ($scope, $location, Task) {
     $scope.message = 'Hello';
-
+/*
      Task.create({
          title: "new Task",
          category: "An Category",
@@ -15,11 +15,9 @@ angular.module('jobApplicationApp')
      }, function(retorno){
          console.log(retorno);
      });
-
+*/
     Task.all(function(retorno){
         console.log(retorno);
     })
-
-
 
   }]);

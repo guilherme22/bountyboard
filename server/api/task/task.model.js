@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
 var TaskSchema = new Schema({
   title: String,
   category: String,
+  context: String,
   active: Boolean,
   reward: String,
   user: String,

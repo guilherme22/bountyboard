@@ -6,16 +6,19 @@ angular.module('jobApplicationApp')
         .state('all', {
             url: '/task/all',
             templateUrl: 'app/task/all/all.html',
-            controller: 'AllCtrl'
+            controller: 'AllCtrl',
+            authenticate: true
         })
         .state('create', {
             url: '/task/create',
             templateUrl: 'app/task/create/create.html',
-            controller: 'CreateCtrl'
+            controller: 'CreateCtrl',
+            authenticate: true
         })
         .state('update', {
             url: '/task/update',
             templateUrl: 'app/task/update/update.html',
-            controller: 'UpdateCtrl'
+            controller: 'UpdateCtrl',
+            authenticate: true
         });
   });
