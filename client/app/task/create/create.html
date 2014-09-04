@@ -8,8 +8,7 @@
         <div class="col-sm-12">
             <form class="form" name="form" ng-submit="register(form)" novalidate>
 
-                <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
-                                            'has-error': form.name.$invalid && submitted }">
+                <div class="form-group">
                     <label>Title</label>
 
                     <input type="text" name="name" class="form-control" ng-model="user.name"
@@ -18,26 +17,23 @@
                         A title is required
                     </p>
                 </div>
-                <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
-                                            'has-error': form.email.$invalid && submitted }">
+
+                <div class="form-group">
                     <label>Description</label>
 
                      <textarea name="context" class="form-control" ng-model="task.context" required mongoose-error></textarea>
 
                 </div>
 
-                <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
-                                            'has-error': form.password.$invalid && submitted }">
-                    <label>Password</label>
+                <div class="form-group">
+                    <label>Reward</label>
 
-                    <input type="password" name="password" class="form-control" ng-model="user.password"
-                           ng-minlength="3"
-                           required
-                           mongoose-error/>
+                    <input type="number" id="reward" name="reward" class="form-control" ng-model="task.reward" required>
                 </div>
+
                 <div>
-                    <button class="btn btn-inverse btn-lg btn-login" type="submit">
-                        Crate Task
+                    <button class="btn btn-inverse btn-lg btn-login glyphicon glyphicon-ok" type="submit">
+                       Save
                     </button>
                 </div>
             </form>
