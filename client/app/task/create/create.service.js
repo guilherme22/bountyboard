@@ -17,14 +17,9 @@ angular.module('jobApplicationApp')
       create: function (task, callback) {
       var cb = callback || angular.noop;
 
-        $http.post('/api/tasks', task).success(cb).error(function(){
+        $http.post('/api/tasks', task).success(cb).error(function error (){
             console.log("Unnautorized")
         })
-            $http.post('/api/tasks', task).success(cb).error(function(data){
-                console.log(data)
-            })
-
-
 
         },
 
