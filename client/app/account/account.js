@@ -18,5 +18,7 @@ angular.module('jobApplicationApp')
         templateUrl: 'app/account/settings/settings.html',
         controller: 'SettingsCtrl',
         authenticate: true
-      });
+   	
+   
+   });
   });
